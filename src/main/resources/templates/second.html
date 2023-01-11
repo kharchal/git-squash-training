@@ -7,9 +7,11 @@
 <body>
     <h2>Second Page</h2>
     <hr/>
-    <span th:each="s : ${list}">
+    <span th:each="s, sStat : ${list}">
         <span th:text="${s}"/>
-        ;
+        <span th:if="${!sStat.last}">;</span>
     </span>
+    <hr/>
+    <a th:href="@{/}">main page</a>
 </body>
 </html>

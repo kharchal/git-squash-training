@@ -15,8 +15,10 @@ public class SecondController {
     public String second(Model model) {
         model.addAttribute("list", new ArrayList<String>(){{
             add("string");
-            add("int");
             add("float");
+            add("int");
+            add("short");
+            add("boolean");
         }});
         return "second";
     }
